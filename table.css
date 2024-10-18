@@ -1,0 +1,166 @@
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+.table-controls {
+    display: flex;
+    flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+    justify-content: space-between; /* Ensures buttons are evenly spaced */
+    margin-bottom: 15px;
+    gap: 10px; /* Adds space between buttons */
+}
+
+.table-controls button {
+    flex: 1 1 auto; /* Makes buttons flexible in size */
+    padding: 8px 10px;
+    background-color: #363756;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    white-space: nowrap; /* Prevents button text from wrapping */
+}
+
+.table-controls button:hover {
+    background-color: #4d5783; /* Add hover effect for a better user experience */
+}
+
+
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination button {
+    margin: 0 10px;
+    padding: 5px 10px;
+    background-color: rgb(43, 39, 58);
+    color: white;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+#pageInfo {
+    margin: 0 10px;
+}
+
+
+
+
+.chatbox-container {
+    width: 100%;
+    max-width: 370px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #f9f9f9;
+}
+
+.chatbox-header {
+    padding: 10px;
+    background-color: #363756;
+    color: white;
+    text-align: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.chatbox-body {
+    height: 300px;
+    padding: 10px;
+    overflow-y: auto;
+    border-bottom: 1px solid #ddd;
+}
+
+.chatbox-messages {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Make sure text wraps inside the message container */
+.chatbox-message {
+    padding: 8px;
+    margin: 5px 0;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    word-wrap: break-word; /* Wrap long words */
+    white-space: pre-wrap; /* Preserve new lines and wrap */
+    max-width: 90%; /* Prevents message from exceeding container width */
+    overflow-wrap: break-word; /* Break long words */
+}
+
+.chatbox-message.user {
+    align-self: flex-end;
+    background-color: #d1e7dd;
+}
+
+.chatbox-message.ai {
+    align-self: flex-start;
+    background-color: #ffe7e7;
+}
+
+.chatbox-footer {
+    padding: 10px;
+    display: flex;
+}
+
+.chatbox-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.chatbox-send-btn {
+    padding: 8px 12px;
+    background-color: #373d56;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chatbox-send-btn:hover {
+    background-color: #4d5783;
+}
+
+
+@media (max-width: 768px) {
+    .table-controls {
+        justify-content: center; /* Center controls on smaller screens */
+    }
+
+    .table-controls button {
+        flex: 1 1 100%; /* Each button takes up full width on smaller screens */
+        margin-bottom: 10px; /* Adds margin to separate buttons vertically */
+        margin-right: 20px;
+        margin-left: 20px;
+
+    }
+
+    .chatbox-container {
+        width: 100%;
+        max-width: 450px;
+    }
+}

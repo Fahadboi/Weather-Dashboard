@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="common.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">Weather App</div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html">Dashboard</a></li>
+                    <li><a href="table.html">Tables</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main content -->
+        <main class="main-content">
+            <header class="header">
+                <input type="text" class="search-bar" placeholder="Search city...">
+                <div class="user-profile">User Profile</div>
+            </header>
+
+            <section class="weather-data">
+                <div class="weather-info">Weather Data Based on City</div>
+            </section>
+
+            <section class="charts">
+                <div class="chart vertical-bar">
+                    <canvas id="temperatureChart" width="300" height="300"></canvas>
+                </div>
+                <div class="chart doughnut-chart">
+                    <canvas id="weatherConditionChart" width="300" height="300" ></canvas>
+                </div>
+                <div class="chart line-chart">
+                    <canvas id="temperatureLineChart" width="300" height="300"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+<!-- scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="dashboard.js"></script>
+
+</html>
